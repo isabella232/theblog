@@ -6,7 +6,7 @@ indices:
     fetch: https://{repo}-{owner}.project-helix.page/{path}
     include:
       - (en|de|fr)/publish/*/*/*/*.(md|docx)
-    target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/query-index.xlsx?d=we7bf6b3af3234076968b30a1565f2373&csf=1&web=1&e=q9o8tW
+    target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/drafts/dpfister/query-index.xlsx?d=w4b78630e911548149b9fbc354c92e725&csf=1&web=1&e=vdhOvr
     sitemap: en/query-index.json
     properties:
       author:
