@@ -5,7 +5,7 @@ indices:
     source: html
     fetch: https://{repo}-{owner}.project-helix.page/{path}
     include:
-      - en/drafts/dpfister/*.(md|docx)
+      - (en|de|fr)/publish/*/*/*/*.(md|docx)
     target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/drafts/dpfister/query-index.xlsx?d=w4b78630e911548149b9fbc354c92e725&csf=1&web=1&e=vdhOvr
     sitemap: en/query-index.json
     properties:
