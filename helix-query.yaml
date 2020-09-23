@@ -1,12 +1,14 @@
 version: 1
 
 indices:
-  raw_index:
+  english: &default
     source: html
     fetch: https://{repo}-{owner}.project-helix.page/{path}
     include:
-      - (en|de|fr)/publish/*/*/*/*.(md|docx)
-    target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/drafts/dpfister/query-index.xlsx?d=w4b78630e911548149b9fbc354c92e725&csf=1&web=1&e=vdhOvr
+      - en/publish/*/*/*/*.(md|docx)
+    exclude:
+      - '**/Document.*'
+    target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/drafts/dpfister/en/query-index.xlsx?d=w4b78630e911548149b9fbc354c92e725&csf=1&web=1&e=xh3WtQ
     sitemap: en/query-index.json
     properties:
       author:
@@ -78,3 +80,15 @@ indices:
         filters: |
           parents:"${context}${language}" AND date < ${date} AND topics:"${topic}"
         cache: 600
+
+  german:
+    <<: *default
+    include:
+      - de/publish/*/*/*/*.(md|docx)
+    target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/drafts/dpfister/de/query-index.xlsx?d=wd8068452b653417da392df472cb64b95&csf=1&web=1&e=YUCqGo
+
+  united-kingdom:
+    <<: *default
+    include:
+      - uk/publish/*/*/*/*.(md|docx)
+    target: https://adobe.sharepoint.com/:x:/r/sites/TheBlog/Shared%20Documents/theblog/en/drafts/dpfister/uk/query-index.xlsx?d=w3e86b0ac3eca4ff1af5a99838574a40e&csf=1&web=1&e=9KbXui
